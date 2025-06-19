@@ -16,17 +16,40 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="flex justify-center items-center h-screen w-screen bg-black">
-    <main
-      class="w-[98vw] h-[98vh] overflow-y-auto rounded-[45px] overflow-x-hidden"
+  <body
+    class="body flex justify-center items-center h-screen w-screen bg-black"
+  >
+    <nav
+      id="navbar"
+      class="fixed top-20 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] md:w-[30vw] h-auto md:h-[10vh] bg-black rounded-full flex justify-between px-6 py-3 items-center shadow-lg z-50 text-white"
     >
-      <nav class="fixed hidden top-0 left-0 bg-black md:w-[30vw] md:h-[12vh]">
-        <p>Project</p>
-        <p>Services</p>
-        <p>About</p>
-        <p>Contact</p>
-      </nav>
+      <div class="text-xl font-bold">Logo</div>
 
+      <div class="hidden md:flex gap-4 items-center text-sm">
+        <a href="#"><i class="fas fa-briefcase"></i> Project</a>
+        <a href="#"><i class="fas fa-cogs"></i> Services</a>
+        <a href="#"><i class="fas fa-user"></i> About</a>
+        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+
+      <button id="menu-btn" class="md:hidden text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="fixed top-5 left-1/2 -translate-x-1/2 bg-black text-white w-[80vw] p-4 rounded-lg flex flex-col gap-3 items-center shadow-md md:hidden z-40 hidden"
+    >
+      <a href="#"><i class="fas fa-briefcase"></i> Project</a>
+      <a href="#"><i class="fas fa-cogs"></i> Services</a>
+      <a href="#"><i class="fas fa-user"></i> About</a>
+      <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+
+    <main
+      class="mainContainer w-[98vw] h-[98vh] overflow-y-auto rounded-[45px] overflow-x-hidden"
+    >
       <section class="s1 w-screen min-h-screen relative overflow-x-hidden">
         <div class="bg-img h-full w-full absolute top-0 left-0 z-0">
           <img
@@ -132,7 +155,6 @@
           <h1 class="font-lighter text-xl md:text-2xl">OUR SERVICES</h1>
         </div>
 
-        <!-- Service 1 -->
         <div
           class="sr-container border-b pb-12 border-grey w-full flex flex-col md:flex-row justify-between gap-8"
         >
@@ -151,7 +173,6 @@
           </div>
         </div>
 
-        <!-- Service 2 -->
         <div
           class="sr-container border-b pb-12 border-grey w-full flex flex-col md:flex-row justify-between gap-8"
         >
@@ -172,7 +193,6 @@
           </div>
         </div>
 
-        <!-- Service 3 -->
         <div
           class="sr-container border-b pb-12 border-grey w-full flex flex-col md:flex-row justify-between gap-8"
         >
@@ -193,9 +213,7 @@
       </section>
 
       <section class="s3 relative w-screen flex flex-col">
-        <!-- Card START -->
         <div class="card1 w-full h-screen sticky top-0 left-0 text-white">
-          <!-- Background Image -->
           <div class="w-full h-full absolute top-0 left-0 z-0">
             <img
               class="w-full h-full object-cover"
@@ -207,7 +225,6 @@
             ></div>
           </div>
 
-          <!-- Content -->
           <div
             class="relative z-10 w-full h-full flex flex-col justify-between px-6 py-12 lg:px-[100px] lg:py-[100px]"
           >
@@ -237,9 +254,6 @@
             </div>
           </div>
         </div>
-        <!-- Card END -->
-
-        <!-- Card 2 -->
         <div class="card1 w-full h-screen sticky top-0 left-0 text-white">
           <div class="w-full h-full absolute top-0 left-0 z-0">
             <img
@@ -434,7 +448,6 @@
           class="s5-card w-full border-b border-gray-400 flex flex-col md:flex-row justify-between items-center gap-6 p-6 md:p-8"
         >
           <div class="info flex items-center gap-12 w-full md:w-auto">
-            <!-- Video -->
             <div class="media w-48 h-48 rounded-md overflow-hidden">
               <video
                 class="w-full h-full object-cover"
@@ -444,7 +457,6 @@
                 autoplay
               ></video>
             </div>
-            <!-- Name -->
             <div>
               <h1 class="text-3xl font-semibold text-gray-900">
                 Cameron Williamson
@@ -480,7 +492,6 @@
           class="s5-card w-full border-b border-gray-400 flex flex-col md:flex-row justify-between items-center gap-6 p-6 md:p-8"
         >
           <div class="info flex items-center gap-12 w-full md:w-auto">
-            <!-- Video -->
             <div class="media w-48 h-48 rounded-md overflow-hidden">
               <video
                 class="w-full h-full object-cover"
@@ -490,7 +501,6 @@
                 autoplay
               ></video>
             </div>
-            <!-- Name -->
             <div>
               <h1 class="text-3xl font-semibold text-gray-900">
                 Albert Flores
@@ -526,7 +536,6 @@
           class="s5-card w-full border-b border-gray-400 flex flex-col md:flex-row justify-between items-center gap-6 p-6 md:p-8"
         >
           <div class="info flex items-center gap-12 w-full md:w-auto">
-            <!-- Video -->
             <div class="media w-48 h-48 rounded-md overflow-hidden">
               <video
                 class="w-full h-full object-cover"
@@ -536,7 +545,6 @@
                 autoplay
               ></video>
             </div>
-            <!-- Name -->
             <div>
               <h1 class="text-3xl font-semibold text-gray-900">
                 Bessie Cooper
@@ -572,7 +580,6 @@
           class="s5-card w-full border-b border-gray-400 flex flex-col md:flex-row justify-between items-center gap-6 p-6 md:p-8"
         >
           <div class="info flex items-center gap-12 w-full md:w-auto">
-            <!-- Video -->
             <div class="media w-48 h-48 rounded-md overflow-hidden">
               <video
                 class="w-full h-full object-cover"
@@ -582,7 +589,6 @@
                 autoplay
               ></video>
             </div>
-            <!-- Name -->
             <div>
               <h1 class="text-3xl font-semibold text-gray-900">
                 Annette Black
@@ -593,18 +599,15 @@
       </section>
 
       <section class="s6 w-screen h-screen relative text-white">
-        <!-- Background Image -->
         <div class="absolute top-0 left-0 w-full h-full z-0">
           <img
             class="w-full h-full object-cover"
             src="https://framerusercontent.com/images/xUN0vHVzRjAM9u69ofFlZHxE4.webp?scale-down-to=2048"
             alt="Background"
           />
-          <!-- Dark Overlay -->
           <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
         </div>
 
-        <!-- Main Content -->
         <div
           class="main-container relative z-10 flex flex-col px-6 md:p-20 h-full space-y-12 justify-center md:w-[40%]"
         >
@@ -643,7 +646,6 @@
           <h1 class="text-2xl md:text-7xl font-semibold">Curious about what</h1>
           <h1 class="text-2xl md:text-7xl font-semibold">we can do for you?</h1>
 
-          <!-- Animated Button -->
           <button
             class="relative group mt-6 bg-black text-white rounded-full px-12 py-3 overflow-hidden"
           >
@@ -731,7 +733,6 @@
             <p class="text-gray-400 hover:text-white cursor-pointer">Contact</p>
           </div>
 
-          <!-- CMS -->
           <div class="flex flex-col gap-3 w-full sm:w-1/2 lg:w-1/5">
             <p class="font-bold mb-2">CMS</p>
             <p class="text-gray-400 hover:text-white cursor-pointer">
@@ -746,7 +747,6 @@
             </p>
           </div>
 
-          <!-- Utility Pages -->
           <div class="flex flex-col gap-3 w-full sm:w-1/2 lg:w-1/5">
             <p class="font-bold mb-2">UTILITY PAGES</p>
             <p class="text-gray-400 hover:text-white cursor-pointer">404</p>
@@ -756,7 +756,6 @@
           </div>
         </div>
 
-        <!-- Bottom Note -->
         <div class="w-full text-center mt-14 text-gray-500 text-sm">
           @C Made By
           <span class="text-white border-b border-white cursor-pointer"
@@ -765,5 +764,16 @@
         </div>
       </footer>
     </main>
+
+    <!-- <script>
+      console.log("heelo");
+      
+      window.addEventListener("scroll", () => {
+        console.log("scrolling");
+        debugger;
+      });
+    </script> -->
+
+    <script src="script.js"></script>
   </body>
 </html>
