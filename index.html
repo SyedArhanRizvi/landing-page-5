@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tailwind Test</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="flex justify-center items-center h-screen w-screen bg-black">
+    <main
+      class="w-[98vw] h-[98vh] overflow-y-auto rounded-[45px] overflow-x-hidden"
+    >
+      <nav class="fixed hidden top-0 left-0 bg-black md:w-[30vw] md:h-[12vh]">
+        <p>Project</p>
+        <p>Services</p>
+        <p>About</p>
+        <p>Contact</p>
+      </nav>
+
+      <section class="s1 w-screen min-h-screen relative overflow-x-hidden">
+        <div class="bg-img h-full w-full absolute top-0 left-0 z-0">
+          <img
+            class="w-full h-full object-cover"
+            src="https://framerusercontent.com/images/hqwpWFdY5hLvzhIXC5QojyI0tU.webp?scale-down-to=1024"
+            alt=""
+          />
+          <div
+            class="absolute h-full w-full bg-[#00000086] top-0 left-0 z-10"
+          ></div>
+        </div>
+
+        <div
+          class="hero-details relative z-20 gap-[60px] w-full flex flex-col items-center text-white py-10"
+        >
+          <div
+            class="nav w-11/12 max-w-7xl mx-auto py-4 px-2 flex flex-col sm:flex-row justify-between items-center gap-4"
+          >
+            <div class="mb-2 sm:mb-0">
+              <h1 class="text-2xl font-bold tracking-wide">arkitect</h1>
+            </div>
+            <div class="flex gap-6 text-xl text-white">
+              <a
+                href="#"
+                class="hover:text-blue-400 transition-colors"
+                title="Telegram"
+              >
+                <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a
+                href="#"
+                class="hover:text-pink-500 transition-colors"
+                title="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="hover:text-sky-400 transition-colors"
+                title="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="hero-content1 w-[90%] sm:w-[70%] md:w-[40%] mb-20 flex flex-col justify-center items-center text-center gap-2"
+          >
+            <h1 class="text-6xl sm:text-7xl md:text-8xl">YOUR</h1>
+            <h1 class="text-6xl sm:text-7xl md:text-8xl">DREAM</h1>
+            <h1 class="text-6xl sm:text-7xl md:text-8xl">PALACE</h1>
+            <p class="text-lg sm:text-xl mt-4">
+              Designing timeless, luxurious spaces that redefine modern
+              architecture and living.
+            </p>
+          </div>
+
+          <div
+            class="hero-content2 w-[90%] flex flex-col lg:flex-row justify-between gap-10"
+          >
+            <div class="flex flex-col gap-4 lg:w-[30%]">
+              <p class="text-4xl sm:text-5xl">We love & live architecture</p>
+              <p class="text-xl sm:text-2xl">Our Story icon</p>
+            </div>
+
+            <div class="flex flex-col gap-8 lg:w-[60%]">
+              <p class="text-lg sm:text-2xl font-light">
+                Arkitect creates luxurious, modern spaces where innovation meets
+                timeless elegance. Our designs push boundaries, blending
+                precision, creativity, and functionality.
+              </p>
+              <p class="text-lg sm:text-2xl font-light">
+                With a commitment to excellence, we craft architectural
+                masterpieces that inspire and endure. Every project reflects our
+                passion for bold ideas, meticulous craftsmanship, and the future
+                of contemporary living.
+              </p>
+              <div class="flex flex-col gap-4 sm:gap-6">
+                <span class="text-xl sm:text-2xl border-b border-white"
+                  >+49 176 123 456 78</span
+                >
+                <span class="text-xl sm:text-2xl border-b border-white"
+                  >hello@example.com</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="s2 w-screen min-h-screen bg-white gap-8 flex flex-col items-center p-6 md:p-12"
+      >
+        <div class="mb-8 text-center">
+          <h1 class="font-lighter text-xl md:text-2xl">OUR SERVICES</h1>
+        </div>
+
+        <!-- Service 1 -->
+        <div
+          class="sr-container border-b pb-12 border-grey w-full flex flex-col md:flex-row justify-between gap-8"
+        >
+          <div class="flex md:w-[40%] gap-4 md:gap-8 md:pl-12 items-start">
+            <p class="text-3xl md:text-4xl font-bold">01</p>
+            <h1 class="text-3xl md:text-4xl font-bold">Architecture Design</h1>
+          </div>
+          <div class="flex flex-col gap-6 md:gap-8 md:w-[45%] px-2 md:px-0">
+            <p class="text-base md:text-xl">
+              We create innovative, modern architectural designs that blend
+              luxury, functionality, and timeless aesthetics...
+            </p>
+            <p class="text-base md:text-xl uppercase">Concept Development</p>
+            <p class="text-base md:text-xl uppercase">Space Planning</p>
+            <p class="text-base md:text-xl uppercase">3D Visualization</p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div
+          class="sr-container border-b pb-12 border-grey w-full flex flex-col md:flex-row justify-between gap-8"
+        >
+          <div class="flex md:w-[40%] gap-4 md:gap-8 md:pl-12 items-start">
+            <p class="text-3xl md:text-4xl font-bold">02</p>
+            <h1 class="text-3xl md:text-4xl font-bold">Interior Design</h1>
+          </div>
+          <div class="flex flex-col gap-6 md:gap-8 md:w-[45%] px-2 md:px-0">
+            <p class="text-base md:text-xl">
+              Our interior designs elevate spaces with refined materials,
+              thoughtful layouts, and a seamless blend of elegance...
+            </p>
+            <p class="text-base md:text-xl uppercase">
+              Luxury Furnishings & Materials
+            </p>
+            <p class="text-base md:text-xl uppercase">Custom Lighting Design</p>
+            <p class="text-base md:text-xl uppercase">Spatial Optimization</p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div
+          class="sr-container border-b pb-12 border-grey w-full flex flex-col md:flex-row justify-between gap-8"
+        >
+          <div class="flex md:w-[40%] gap-4 md:gap-8 md:pl-12 items-start">
+            <p class="text-3xl md:text-4xl font-bold">03</p>
+            <h1 class="text-3xl md:text-4xl font-bold">Exterior Design</h1>
+          </div>
+          <div class="flex flex-col gap-6 md:gap-8 md:w-[45%] px-2 md:px-0">
+            <p class="text-base md:text-xl">
+              We craft striking exteriors that integrate seamlessly with nature
+              and urban environments...
+            </p>
+            <p class="text-base md:text-xl uppercase">Façade Design</p>
+            <p class="text-base md:text-xl uppercase">Landscape Integration</p>
+            <p class="text-base md:text-xl uppercase">Outdoor Living Spaces</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s3 relative w-screen flex flex-col">
+        <!-- Card START -->
+        <div class="card1 w-full h-screen sticky top-0 left-0 text-white">
+          <!-- Background Image -->
+          <div class="w-full h-full absolute top-0 left-0 z-0">
+            <img
+              class="w-full h-full object-cover"
+              src="https://framerusercontent.com/images/uaQSGK1B1TgMSnVa0phE1L9KUI.webp?scale-down-to=2048"
+              alt="Ocean Wave Background"
+            />
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-[#00000066]"
+            ></div>
+          </div>
+
+          <!-- Content -->
+          <div
+            class="relative z-10 w-full h-full flex flex-col justify-between px-6 py-12 lg:px-[100px] lg:py-[100px]"
+          >
+            <div class="card-txt space-y-4 w-full md:w-[70%] lg:w-[40%]">
+              <h1
+                class="text-4xl md:text-6xl lg:text-8xl font-light uppercase tracking-wide"
+              >
+                Ocean Wave
+              </h1>
+              <p class="text-base md:text-lg lg:text-xl max-w-xl">
+                A flowing, organic design inspired by the movement and rhythm of
+                the sea.
+              </p>
+            </div>
+
+            <div class="btns flex flex-wrap gap-4 mt-8">
+              <button
+                class="uppercase px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition"
+              >
+                Commercial
+              </button>
+              <button
+                class="uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
+              >
+                Berlin
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card END -->
+
+        <!-- Card 2 -->
+        <div class="card1 w-full h-screen sticky top-0 left-0 text-white">
+          <div class="w-full h-full absolute top-0 left-0 z-0">
+            <img
+              class="w-full h-full object-cover"
+              src="https://framerusercontent.com/images/lg5hrZ6zegvQyHrSvmZuWy8i4.webp?scale-down-to=2048"
+              alt="Puzzle Tower"
+            />
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-[#00000066]"
+            ></div>
+          </div>
+          <div
+            class="relative z-10 w-full h-full flex flex-col justify-between px-6 py-12 lg:px-[100px] lg:py-[100px]"
+          >
+            <div class="card-txt space-y-4 w-full md:w-[70%] lg:w-[40%]">
+              <h1
+                class="text-4xl md:text-6xl lg:text-8xl font-light uppercase tracking-wide"
+              >
+                Puzzle Tower
+              </h1>
+              <p class="text-base md:text-lg lg:text-xl max-w-xl">
+                A bold, modular design redefining vertical living with dynamic,
+                interlocking structure.
+              </p>
+            </div>
+            <div class="btns flex flex-wrap gap-4 mt-8">
+              <button
+                class="uppercase px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition"
+              >
+                Commercial
+              </button>
+              <button
+                class="uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
+              >
+                Berlin
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card1 w-full h-screen sticky top-0 left-0 text-white">
+          <div class="w-full h-full absolute top-0 left-0 z-0">
+            <img
+              class="w-full h-full object-cover"
+              src="https://framerusercontent.com/images/hl3Bit7L77oDc6davETl9vvV5g.webp?scale-down-to=2048"
+              alt="Honey Comb"
+            />
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-[#00000066]"
+            ></div>
+          </div>
+          <div
+            class="relative z-10 w-full h-full flex flex-col justify-between px-6 py-12 lg:px-[100px] lg:py-[100px]"
+          >
+            <div class="card-txt space-y-4 w-full md:w-[70%] lg:w-[40%]">
+              <h1
+                class="text-4xl md:text-6xl lg:text-8xl font-light uppercase tracking-wide"
+              >
+                Honey Comb
+              </h1>
+              <p class="text-base md:text-lg lg:text-xl max-w-xl">
+                A nature-inspired structure featuring a hexagonal design for
+                beauty and efficiency.
+              </p>
+            </div>
+            <div class="btns flex flex-wrap gap-4 mt-8">
+              <button
+                class="uppercase px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition"
+              >
+                Commercial
+              </button>
+              <button
+                class="uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
+              >
+                Berlin
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card1 w-full h-screen sticky top-0 left-0 text-white">
+          <div class="w-full h-full absolute top-0 left-0 z-0">
+            <img
+              class="w-full h-full object-cover"
+              src="https://framerusercontent.com/images/gGuuJzMf6c7Wjx35uKaqeiIpw.webp?scale-down-to=2048"
+              alt="Wave House"
+            />
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-[#00000066]"
+            ></div>
+          </div>
+          <div
+            class="relative z-10 w-full h-full flex flex-col justify-between px-6 py-12 lg:px-[100px] lg:py-[100px]"
+          >
+            <div class="card-txt space-y-4 w-full md:w-[70%] lg:w-[40%]">
+              <h1
+                class="text-4xl md:text-6xl lg:text-8xl font-light uppercase tracking-wide"
+              >
+                Wave House
+              </h1>
+              <p class="text-base md:text-lg lg:text-xl max-w-xl">
+                Wave house is a visionary residential masterpiece inspired by
+                the fluid movement of water.
+              </p>
+            </div>
+            <div class="btns flex flex-wrap gap-4 mt-8">
+              <button
+                class="uppercase px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition"
+              >
+                Commercial
+              </button>
+              <button
+                class="uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
+              >
+                Berlin
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="s4 w-screen flex flex-col md:flex-row justify-between p-6 md:p-12 bg-white text-black gap-10"
+      >
+        <!-- Left Side -->
+        <div class="left-side md:w-[35%] flex flex-col gap-6 md:gap-8">
+          <h1 class="text-4xl md:text-6xl font-bold">Architecture in Motion</h1>
+          <p class="text-base md:text-xl">
+            We analyze your vision, site conditions, and functional requirements
+            to create a strategic framework.
+          </p>
+          <p class="text-base md:text-xl font-medium flex items-center gap-2">
+            Our Services
+          </p>
+        </div>
+
+        <!-- Right Side -->
+        <div
+          class="right-side md:w-[60%] grid grid-cols-1 sm:grid-cols-2 gap-6"
+        >
+          <!-- Card 1 -->
+          <div
+            class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
+          >
+            <h1 class="text-4xl md:text-6xl font-light">200+</h1>
+            <p class="text-lg md:text-xl uppercase">Projects</p>
+            <p class="text-sm md:text-base text-[#606060]">
+              We have designed and completed over 300 projects, each reflecting
+              our dedication to innovation, precision, and timeless
+              architectural excellence.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
+          >
+            <h1 class="text-4xl md:text-6xl font-light">300+</h1>
+            <p class="text-lg md:text-xl uppercase">Clients</p>
+            <p class="text-sm md:text-base text-[#606060]">
+              With over 200 satisfied clients, we have built lasting
+              relationships through exceptional design, strategic planning, and
+              craftsmanship.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
+          >
+            <h1 class="text-4xl md:text-6xl font-light">100%</h1>
+            <p class="text-lg md:text-xl uppercase">Happy Clients</p>
+            <p class="text-sm md:text-base text-[#606060]">
+              Client satisfaction is our priority—every project is delivered
+              with precision, passion, and attention to detail, ensuring
+              outstanding results.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
+          >
+            <h1 class="text-4xl md:text-6xl font-light">110%</h1>
+            <p class="text-lg md:text-xl uppercase">Commitments</p>
+            <p class="text-sm md:text-base text-[#606060]">
+              Client satisfaction is our priority—every project is delivered
+              with precision, passion, and attention to detail, ensuring
+              outstanding results.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s5 bg-white w-screen flex flex-col gap-8 p-12">
+        <div class="text-center"><h1>OUR TEAM</h1></div>
+
+        <div
+          class="s5-card w-full border-b border-gray-400 flex flex-col md:flex-row justify-between items-center gap-6 p-6 md:p-8"
+        >
+          <div class="info flex items-center gap-12 w-full md:w-auto">
+            <!-- Video -->
+            <div class="media w-48 h-48 rounded-md overflow-hidden">
+              <video
+                class="w-full h-full object-cover"
+                src="https://framerusercontent.com/assets/jBY8eVfo7Lai0TIeYDeeda6EO2I.mp4"
+                loop
+                muted
+                autoplay
+              ></video>
+            </div>
+            <!-- Name -->
+            <div>
+              <h1 class="text-3xl font-semibold text-gray-900">
+                Cameron Williamson
+              </h1>
+            </div>
+          </div>
+
+          <div
+            class="text-center flex justify-between gap-8 items-center md:text-right space-y-2"
+          >
+            <div
+              class="flex justify-center md:justify-end md:gap-28 gap-4 text-lg"
+            >
+              <div><p class="font-medium">CEO</p></div>
+              <div
+                class="flex justify-center md:justify-end gap-6 text-lg text-gray-600"
+              >
+                <a href="#" class="hover:text-blue-500"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-pink-500"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="hover:text-sky-500"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="s5-card w-full border-b border-gray-400 flex flex-col md:flex-row justify-between items-center gap-6 p-6 md:p-8"
+        >
+          <div class="info flex items-center gap-12 w-full md:w-auto">
+            <!-- Video -->
+            <div class="media w-48 h-48 rounded-md overflow-hidden">
+              <video
+                class="w-full h-full object-cover"
+                src="https://framerusercontent.com/assets/5xW2NjpcBLE1SmPbwuvnrkbIObo.mp4"
+                loop
+                muted
+                autoplay
+              ></video>
+            </div>
+            <!-- Name -->
+            <div>
+              <h1 class="text-3xl font-semibold text-gray-900">
+                Albert Flores
+              </h1>
+            </div>
+          </div>
+
+          <div
+            class="text-center flex justify-between gap-8 items-center md:text-right space-y-2"
+          >
+            <div
+              class="flex justify-center md:justify-end md:gap-28 gap-4 text-lg"
+            >
+              <div><p class="font-medium">CEO</p></div>
+              <div
+                class="flex justify-center md:justify-end gap-6 text-lg text-gray-600"
+              >
+                <a href="#" class="hover:text-blue-500"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-pink-500"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="hover:text-sky-500"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="s5-card w-full border-b border-gray-400 flex flex-col md:flex-row justify-between items-center gap-6 p-6 md:p-8"
+        >
+          <div class="info flex items-center gap-12 w-full md:w-auto">
+            <!-- Video -->
+            <div class="media w-48 h-48 rounded-md overflow-hidden">
+              <video
+                class="w-full h-full object-cover"
+                src="https://framerusercontent.com/assets/K2LDsNSpyZB7GqJcewYLCM2gW9I.mp4"
+                loop
+                muted
+                autoplay
+              ></video>
+            </div>
+            <!-- Name -->
+            <div>
+              <h1 class="text-3xl font-semibold text-gray-900">
+                Bessie Cooper
+              </h1>
+            </div>
+          </div>
+
+          <div
+            class="text-center flex justify-between gap-8 items-center md:text-right space-y-2"
+          >
+            <div
+              class="flex justify-center md:justify-end md:gap-28 gap-4 text-lg"
+            >
+              <div><p class="font-medium">CEO</p></div>
+              <div
+                class="flex justify-center md:justify-end gap-6 text-lg text-gray-600"
+              >
+                <a href="#" class="hover:text-blue-500"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-pink-500"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="hover:text-sky-500"
+                  ><i class="fab fa-telegram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="s5-card w-full border-b border-gray-400 flex flex-col md:flex-row justify-between items-center gap-6 p-6 md:p-8"
+        >
+          <div class="info flex items-center gap-12 w-full md:w-auto">
+            <!-- Video -->
+            <div class="media w-48 h-48 rounded-md overflow-hidden">
+              <video
+                class="w-full h-full object-cover"
+                src="https://framerusercontent.com/assets/OBPYWjgyDb0l3Iox77f6HCKvhqI.mp4"
+                loop
+                muted
+                autoplay
+              ></video>
+            </div>
+            <!-- Name -->
+            <div>
+              <h1 class="text-3xl font-semibold text-gray-900">
+                Annette Black
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="s6 w-screen h-screen relative text-white">
+        <!-- Background Image -->
+        <div class="absolute top-0 left-0 w-full h-full z-0">
+          <img
+            class="w-full h-full object-cover"
+            src="https://framerusercontent.com/images/xUN0vHVzRjAM9u69ofFlZHxE4.webp?scale-down-to=2048"
+            alt="Background"
+          />
+          <!-- Dark Overlay -->
+          <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div
+          class="main-container relative z-10 flex flex-col px-6 md:p-20 h-full space-y-12 justify-center md:w-[40%]"
+        >
+          <h1
+            class="text-3xl md:text-8xl font-semibold uppercase tracking-wide"
+          >
+            Bold Design
+          </h1>
+          <p class="max-w-2xl text-lg md:text-xl leading-relaxed">
+            With a clear plan in place, we craft a sophisticated design that
+            blends aesthetics, functionality, and innovation.
+          </p>
+          <p
+            class="text-lg md:text-xl flex items-center gap-2 group cursor-pointer"
+          >
+            Our Story
+            <span
+              class="text-xl transform group-hover:translate-x-1 transition"
+            >
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="s7 w-screen rounded-b-[45px] overflow-hidden h-screen bg-white flex justify-center items-center px-4 bg-white"
+      >
+        <div
+          class="flex flex-col justify-center items-center text-center space-y-4"
+        >
+          <p class="uppercase text-sm md:text-base tracking-widest text-black">
+            Contact
+          </p>
+
+          <h1 class="text-2xl md:text-7xl font-semibold">Curious about what</h1>
+          <h1 class="text-2xl md:text-7xl font-semibold">we can do for you?</h1>
+
+          <!-- Animated Button -->
+          <button
+            class="relative group mt-6 bg-black text-white rounded-full px-12 py-3 overflow-hidden"
+          >
+            <p
+              class="transition-all duration-300 group-hover:-translate-y-[200px]"
+            >
+              Get In Touch
+            </p>
+            <p
+              class="absolute left-0 top-full w-full text-center transition-all duration-300 group-hover:top-1/2 group-hover:-translate-y-1/2"
+            >
+              Get In Touch
+            </p>
+          </button>
+        </div>
+      </section>
+
+      <footer
+        class="bg-black flex flex-col justify-between items-center text-white px-8 py-12 min-h-[80vh]"
+      >
+        <div
+          class="w-full flex flex-col lg:flex-row justify-between p-12 items-start gap-y-16 gap-x-12"
+        >
+          <div class="flex flex-col gap-6 w-full lg:w-1/4">
+            <div>
+              <h1 class="text-3xl font-semibold tracking-wide">arkitect</h1>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              <p
+                class="border-b border-white relative group w-fit cursor-pointer"
+              >
+                <span
+                  class="inline-block group-hover:-translate-x-1 transition-all duration-300"
+                >
+                  +49 176 123 456 78
+                </span>
+                <span
+                  class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+                ></span>
+              </p>
+              <p
+                class="border-b border-white relative group w-fit cursor-pointer"
+              >
+                <span
+                  class="inline-block group-hover:-translate-x-1 transition-all duration-300"
+                >
+                  hello@example.com
+                </span>
+                <span
+                  class="absolute left-0 bottom-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"
+                ></span>
+              </p>
+            </div>
+            <div class="flex gap-5 pt-2">
+              <a
+                href="#"
+                class="rounded-[20px] p-3 bg-white text-black text-xl hover:scale-110 transition-all"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="rounded-[20px] p-3 bg-white text-black text-xl hover:scale-110 transition-all"
+              >
+                <i class="fab fa-telegram"></i>
+              </a>
+              <a
+                href="#"
+                class="rounded-[20px] p-3 bg-white text-black text-xl hover:scale-110 transition-all"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3 w-full sm:w-1/2 lg:w-1/5">
+            <p class="font-bold mb-2">PAGES</p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">Home</p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">
+              Services
+            </p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">About</p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">Career</p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">Contact</p>
+          </div>
+
+          <!-- CMS -->
+          <div class="flex flex-col gap-3 w-full sm:w-1/2 lg:w-1/5">
+            <p class="font-bold mb-2">CMS</p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">
+              Projects
+            </p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">
+              Project Single
+            </p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">Blog</p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">
+              Blog Single
+            </p>
+          </div>
+
+          <!-- Utility Pages -->
+          <div class="flex flex-col gap-3 w-full sm:w-1/2 lg:w-1/5">
+            <p class="font-bold mb-2">UTILITY PAGES</p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">404</p>
+            <p class="text-gray-400 hover:text-white cursor-pointer">
+              Licensing
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Note -->
+        <div class="w-full text-center mt-14 text-gray-500 text-sm">
+          @C Made By
+          <span class="text-white border-b border-white cursor-pointer"
+            >Ritz Media</span
+          >
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
