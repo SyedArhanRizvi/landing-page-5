@@ -2,3 +2,12 @@
     box-sizing: border-box;
     /* background: #0000005b; */
 }
+@font-face {
+  font-family: 'CustomFont';
+  src: url('https://framerusercontent.com/third-party-assets/fontshare/wf/ECUEQQ5BLZLFJS3PPLWOEEVS7SQONQMH/WNTXEMDDVWUVWDURRKDXCJC6G7TMP277/TBWKTFSYABV4KN4GNIJMAOQUOTYBUWB3.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'CustomFont', sans-serif;
+}
