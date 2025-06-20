@@ -203,63 +203,69 @@ function countableTxt() {
   });
 }
 
-function hoverAbsoluteDiv(){
-  
-const mainContainer = document.querySelector(".mainContainer");
-const absoluteDiv = document.querySelector(".absoluteDiv");
-const zoomedText = absoluteDiv.querySelector(".zoomedText");
+function hoverAbsoluteDiv() {
+  const mainContainer = document.querySelector(".mainContainer");
+  const absoluteDiv = document.querySelector(".absoluteDiv");
+  const zoomedText = absoluteDiv.querySelector(".zoomedText");
 
-mainContainer.addEventListener("mousemove", (e) => {
-  gsap.to(".absoluteDiv", {
-    x: e.clientX,
-    y: e.clientY,
-    duration: 0.3,
-    ease: "power2.out",
-  });
-});
-
-// s2 specific enlargement
-// const s2 = document.querySelector(".s2");
-mainContainer.addEventListener("mouseenter", () => {
-  gsap.to(".absoluteDiv", {
-    height: "80px",
-    width: "80px",
-    opacity: 1,
-    scale: 1,
-    duration: 0.3,
-  });
-});
-mainContainer.addEventListener("mouseleave", () => {
-  gsap.to(".absoluteDiv", {
-    height: "40px",
-    width: "40px",
-    opacity: 0,
-    scale: 0,
-    duration: 0.3,
-  });
-});
-
-document.querySelectorAll(".hoverTextImg").forEach((el) => {
-  el.addEventListener("mouseenter", (e) => {
-    zoomedText.innerText = el.innerText;
+  // Move the magnifier with mouse
+  mainContainer.addEventListener("mousemove", (e) => {
+    gsap.to(absoluteDiv, {
+      x: e.clientX,
+      y: e.clientY,
+      duration: 0.3,
+      ease: "power2.out",
+    });
   });
 
-  el.addEventListener("mousemove", (e) => {
-    const bounds = el.getBoundingClientRect();
-    const offsetX = e.clientX - bounds.left;
-    const offsetY = e.clientY - bounds.top;
-
-  
-    zoomedText.style.transform = `translate(${-offsetX}px, ${-offsetY}px) scale(2.5)`;
-    zoomedText.style.whiteSpace = "nowrap";
+  // Show and enlarge magnifier on mouse enter
+  mainContainer.addEventListener("mouseenter", () => {
+    gsap.to(absoluteDiv, {
+      height: "80px",
+      width: "80px",
+      opacity: 1,
+      scale: 1,
+      duration: 0.3,
+    });
   });
 
-  el.addEventListener("mouseleave", () => {
-    zoomedText.innerText = "";
+  // Hide magnifier on mouse leave
+  mainContainer.addEventListener("mouseleave", () => {
+    gsap.to(absoluteDiv, {
+      height: "40px",
+      width: "40px",
+      opacity: 0,
+      scale: 0,
+      duration: 0.3,
+    });
+    zoomedText.innerText = ""; // Clear text when leaving container
   });
-});
 
+  // Handle text zoom on elements with .hoverTextImg
+  document.querySelectorAll(".hoverTextImg").forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      zoomedText.innerText = el.innerText;
+      zoomedText.style.whiteSpace = "nowrap";
+      zoomedText.style.fontSize = getComputedStyle(el).fontSize;
+      zoomedText.style.fontWeight = getComputedStyle(el).fontWeight;
+    });
+
+    el.addEventListener("mousemove", (e) => {
+      const bounds = el.getBoundingClientRect();
+      const offsetX = e.clientX - bounds.left;
+      const offsetY = e.clientY - bounds.top;
+
+      zoomedText.style.transform = `translate(${-offsetX + 100}px, ${-offsetY}px) scale(3.5)`;
+      zoomedText.style.transformOrigin = "top left";
+    });
+
+    el.addEventListener("mouseleave", () => {
+      zoomedText.innerText = "";
+      zoomedText.style.transform = "none";
+    });
+  });
 }
+
 
 
 hoverAbsoluteDiv()
