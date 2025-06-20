@@ -1,23 +1,3 @@
-// let lastScrollY = window.scrollY;
-// const navbar = document.getElementById("navbar");
-// const menuBtn = document.getElementById("menu-btn");
-// const mobileMenu = document.getElementById("mobile-menu");
-
-// // document.querySelector("main").addEventListener("scroll", () => {
-// //   console.log("Scrolling");
-// // });
-// document.querySelector("main").addEventListener('scroll', (e)=>{
-
-//   if (window.scrollY > lastScrollY) {
-//     navbar.style.top = "-100%";
-//     mobileMenu.classList.add("hidden");
-//   } else {
-//     navbar.style.top = "20px";
-//   }
-
-//   lastScrollY = window.scrollY;
-// })
-
 let tl = gsap.timeline();
 
 function navbarAnimations() {
@@ -224,7 +204,6 @@ function countableTxt() {
 }
 
 countableTxt();
-
 section7Animations();
 section6Animations();
 section5Animations();
