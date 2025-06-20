@@ -19,9 +19,9 @@
   <body
     class="body flex justify-center items-center h-screen w-screen bg-black"
   >
-    <nav
+    <!-- <nav
       id="navbar"
-      class="fixed top-20 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] md:w-[30vw] h-auto md:h-[10vh] bg-black rounded-full flex justify-between px-6 py-3 items-center shadow-lg z-50 text-white"
+      class="absolute top-20 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] md:w-[30vw] h-auto md:h-[10vh] bg-black rounded-full flex justify-between px-6 py-3 items-center shadow-lg z-50 text-white"
     >
       <div class="text-xl font-bold">Logo</div>
 
@@ -35,9 +35,9 @@
       <button id="menu-btn" class="md:hidden text-2xl">
         <i class="fas fa-bars"></i>
       </button>
-    </nav>
+    </nav> -->
 
-    <div
+    <!-- <div
       id="mobile-menu"
       class="fixed top-5 left-1/2 -translate-x-1/2 bg-black text-white w-[80vw] p-4 rounded-lg flex flex-col gap-3 items-center shadow-md md:hidden z-40 hidden"
     >
@@ -45,7 +45,7 @@
       <a href="#"><i class="fas fa-cogs"></i> Services</a>
       <a href="#"><i class="fas fa-user"></i> About</a>
       <a href="#"><i class="fas fa-envelope"></i> Contact</a>
-    </div>
+    </div> -->
 
     <main
       class="mainContainer w-[98vw] h-[98vh] overflow-y-auto rounded-[45px] overflow-x-hidden"
@@ -69,26 +69,26 @@
             class="nav w-11/12 max-w-7xl mx-auto py-4 px-2 flex flex-col sm:flex-row justify-between items-center gap-4"
           >
             <div class="mb-2 sm:mb-0">
-              <h1 class="text-2xl font-bold tracking-wide">arkitect</h1>
+              <h1 class="logo-h1 text-2xl font-bold tracking-wide">arkitect</h1>
             </div>
             <div class="flex gap-6 text-xl text-white">
               <a
                 href="#"
-                class="hover:text-blue-400 transition-colors"
+                class="logo-h-icons hover:text-blue-400 transition-colors"
                 title="Telegram"
               >
                 <i class="fab fa-telegram-plane"></i>
               </a>
               <a
                 href="#"
-                class="hover:text-pink-500 transition-colors"
+                class="logo-h-icons hover:text-pink-500 transition-colors"
                 title="Instagram"
               >
                 <i class="fab fa-instagram"></i>
               </a>
               <a
                 href="#"
-                class="hover:text-sky-400 transition-colors"
+                class="logo-h-icons hover:text-sky-400 transition-colors"
                 title="Twitter"
               >
                 <i class="fab fa-twitter"></i>
@@ -99,10 +99,12 @@
           <div
             class="hero-content1 w-[90%] sm:w-[70%] md:w-[40%] mb-20 flex flex-col justify-center items-center text-center gap-2"
           >
-            <h1 class="text-6xl sm:text-7xl md:text-9xl">YOUR</h1>
-            <h1 class="text-6xl sm:text-7xl md:text-9xl">DREAM</h1>
-            <h1 class="text-6xl sm:text-7xl font-bold md:text-9xl">PLACE</h1>
-            <p class="text-lg sm:text-xl mt-4">
+            <h1 class="hero-ttl text-6xl sm:text-7xl md:text-9xl">YOUR</h1>
+            <h1 class="hero-ttl text-6xl sm:text-7xl md:text-9xl">DREAM</h1>
+            <h1 class="hero-ttl text-6xl sm:text-7xl font-bold md:text-9xl">
+              PLACE
+            </h1>
+            <p class="hero-para text-lg sm:text-xl mt-4">
               Designing timeless, luxurious spaces that redefine modern
               architecture and living.
             </p>
@@ -111,7 +113,7 @@
           <div
             class="hero-content2 w-[90%] flex flex-col lg:flex-row justify-between gap-10"
           >
-            <div class="flex flex-col gap-4 lg:w-[30%]">
+            <div class="hero-para-2-ttl flex flex-col gap-4 lg:w-[30%]">
               <p class="text-4xl sm:text-5xl">We love & live architecture</p>
               <p class="text-xl sm:text-2xl">
                 Our Story
@@ -123,7 +125,7 @@
               </p>
             </div>
 
-            <div class="flex flex-col gap-8 lg:w-[60%]">
+            <div class="hero-para-2 flex flex-col gap-8 lg:w-[60%]">
               <p class="text-lg sm:text-xl font-light">
                 Arkitect creates luxurious, modern spaces where innovation meets
                 timeless elegance. Our designs push boundaries, blending
@@ -151,7 +153,7 @@
       <section
         class="s2 w-screen min-h-screen bg-white gap-8 flex flex-col items-center p-6 md:p-12"
       >
-        <div class="mb-8 text-center">
+        <div class="sr-tag mb-8 text-center">
           <h1 class="font-lighter text-xl md:text-2xl">OUR SERVICES</h1>
         </div>
 
@@ -394,7 +396,7 @@
           <div
             class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
           >
-            <h1 class="text-4xl md:text-6xl font-light">200+</h1>
+            <h1 class="coutable-txt text-4xl md:text-6xl font-light">200+</h1>
             <p class="text-lg md:text-xl uppercase">Projects</p>
             <p class="text-sm md:text-base text-[#606060]">
               We have designed and completed over 300 projects, each reflecting
@@ -406,7 +408,7 @@
           <div
             class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
           >
-            <h1 class="text-4xl md:text-6xl font-light">300+</h1>
+            <h1 class="coutable-txt text-4xl md:text-6xl font-light">300+</h1>
             <p class="text-lg md:text-xl uppercase">Clients</p>
             <p class="text-sm md:text-base text-[#606060]">
               With over 200 satisfied clients, we have built lasting
@@ -418,7 +420,7 @@
           <div
             class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
           >
-            <h1 class="text-4xl md:text-6xl font-light">100%</h1>
+            <h1 class="coutable-txt text-4xl md:text-6xl font-light">100%</h1>
             <p class="text-lg md:text-xl uppercase">Happy Clients</p>
             <p class="text-sm md:text-base text-[#606060]">
               Client satisfaction is our priority—every project is delivered
@@ -430,7 +432,7 @@
           <div
             class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
           >
-            <h1 class="text-4xl md:text-6xl font-light">110%</h1>
+            <h1 class="coutable-txt text-4xl md:text-6xl font-light">110%</h1>
             <p class="text-lg md:text-xl uppercase">Commitments</p>
             <p class="text-sm md:text-base text-[#606060]">
               Client satisfaction is our priority—every project is delivered
@@ -637,7 +639,7 @@
         class="s7 w-screen rounded-b-[45px] overflow-hidden h-screen bg-white flex justify-center items-center px-4 bg-white"
       >
         <div
-          class="flex flex-col justify-center items-center text-center space-y-4"
+          class="s7-div flex flex-col justify-center items-center text-center space-y-4"
         >
           <p class="uppercase text-sm md:text-base tracking-widest text-black">
             Contact
@@ -773,7 +775,8 @@
         debugger;
       });
     </script> -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
