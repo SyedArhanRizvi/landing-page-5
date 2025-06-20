@@ -203,23 +203,47 @@ function countableTxt() {
   });
 }
 
-function hoverAbsoluteDiv() {
-  const mainContainer = document.querySelector(".mainContainer");
+function globalMagnifier() {
   const absoluteDiv = document.querySelector(".absoluteDiv");
   const zoomedText = absoluteDiv.querySelector(".zoomedText");
 
-  // Move the magnifier with mouse
-  mainContainer.addEventListener("mousemove", (e) => {
+  document.addEventListener("mousemove", (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    // Move magnifier to cursor
     gsap.to(absoluteDiv, {
-      x: e.clientX,
-      y: e.clientY,
-      duration: 0.3,
+      x: x,
+      y: y,
+      duration: 0.2,
       ease: "power2.out",
     });
+
+    // Get element under cursor
+    const hoveredElement = document.elementFromPoint(x, y);
+
+    if (hoveredElement && hoveredElement !== absoluteDiv && hoveredElement !== zoomedText) {
+      const styles = getComputedStyle(hoveredElement);
+
+      // Clone text content
+      const content = hoveredElement.innerText || hoveredElement.alt || "";
+      zoomedText.innerText = content;
+      zoomedText.style.fontSize = styles.fontSize;
+      zoomedText.style.fontWeight = styles.fontWeight;
+      zoomedText.style.fontFamily = styles.fontFamily;
+      zoomedText.style.color = styles.color;
+
+      // Position zoomed text with scale
+      const bounds = hoveredElement.getBoundingClientRect();
+      const offsetX = x - bounds.left;
+      const offsetY = y - bounds.top;
+      zoomedText.style.transform = `translate(${-offsetX + 80}px, ${-offsetY}px) scale(3.5)`;
+    } else {
+      zoomedText.innerText = "";
+    }
   });
 
-  // Show and enlarge magnifier on mouse enter
-  mainContainer.addEventListener("mouseenter", () => {
+  document.addEventListener("mouseenter", () => {
     gsap.to(absoluteDiv, {
       height: "80px",
       width: "80px",
@@ -229,8 +253,7 @@ function hoverAbsoluteDiv() {
     });
   });
 
-  // Hide magnifier on mouse leave
-  mainContainer.addEventListener("mouseleave", () => {
+  document.addEventListener("mouseleave", () => {
     gsap.to(absoluteDiv, {
       height: "40px",
       width: "40px",
@@ -238,37 +261,14 @@ function hoverAbsoluteDiv() {
       scale: 0,
       duration: 0.3,
     });
-    zoomedText.innerText = ""; // Clear text when leaving container
-  });
-
-  // Handle text zoom on elements with .hoverTextImg
-  document.querySelectorAll(".hoverTextImg").forEach((el) => {
-    el.addEventListener("mouseenter", () => {
-      zoomedText.innerText = el.innerText;
-      zoomedText.style.whiteSpace = "nowrap";
-      zoomedText.style.fontSize = getComputedStyle(el).fontSize;
-      zoomedText.style.fontWeight = getComputedStyle(el).fontWeight;
-    });
-
-    el.addEventListener("mousemove", (e) => {
-      const bounds = el.getBoundingClientRect();
-      const offsetX = e.clientX - bounds.left;
-      const offsetY = e.clientY - bounds.top;
-
-      zoomedText.style.transform = `translate(${-offsetX + 100}px, ${-offsetY}px) scale(3.5)`;
-      zoomedText.style.transformOrigin = "top left";
-    });
-
-    el.addEventListener("mouseleave", () => {
-      zoomedText.innerText = "";
-      zoomedText.style.transform = "none";
-    });
+    zoomedText.innerText = "";
   });
 }
 
+globalMagnifier();
 
 
-hoverAbsoluteDiv()
+
 countableTxt();
 section7Animations();
 section6Animations();
