@@ -23,6 +23,12 @@
     <main
       class="mainContainer w-[98vw] h-[98vh] overflow-y-auto rounded-[45px] overflow-x-hidden"
     >
+      <div
+        class="absoluteDiv fixed pointer-events-none opacity-0 scale-0 rounded-full border border-black w-10 h-10 overflow-hidden bg-white z-50 flex items-center justify-center"
+      >
+        <div class="zoomedText text-black text-2xl font-semibold"></div>
+      </div>
+
       <section class="s1 w-screen min-h-screen relative overflow-x-hidden">
         <div class="bg-img h-full w-full absolute top-0 left-0 z-0">
           <img
@@ -77,7 +83,9 @@
             <h1 class="hero-ttl text-6xl sm:text-7xl font-bold md:text-9xl">
               PLACE
             </h1>
-            <p class="hero-para text-lg sm:text-xl mt-4">
+            <p
+              class="hoverTextImg hoverTextImg hero-para text-lg sm:text-xl mt-4"
+            >
               Designing timeless, luxurious spaces that redefine modern
               architecture and living.
             </p>
@@ -87,8 +95,10 @@
             class="hero-content2 w-[90%] flex flex-col lg:flex-row justify-between gap-10"
           >
             <div class="hero-para-2-ttl flex flex-col gap-4 lg:w-[30%]">
-              <p class="text-4xl sm:text-5xl">We love & live architecture</p>
-              <p class="text-xl sm:text-2xl">
+              <p class="hoverTextImg text-4xl sm:text-5xl">
+                We love & live architecture
+              </p>
+              <p class="hoverTextImg text-xl sm:text-2xl">
                 Our Story
                 <span
                   class="text-xl transform group-hover:translate-x-1 transition"
@@ -99,12 +109,12 @@
             </div>
 
             <div class="hero-para-2 flex flex-col gap-8 lg:w-[60%]">
-              <p class="text-lg sm:text-xl font-light">
+              <p class="hoverTextImg text-lg sm:text-xl font-light">
                 Arkitect creates luxurious, modern spaces where innovation meets
                 timeless elegance. Our designs push boundaries, blending
                 precision, creativity, and functionality.
               </p>
-              <p class="text-lg sm:text-xl font-light">
+              <p class="hoverTextImg text-lg sm:text-xl font-light">
                 With a commitment to excellence, we craft architectural
                 masterpieces that inspire and endure. Every project reflects our
                 passion for bold ideas, meticulous craftsmanship, and the future
@@ -134,17 +144,23 @@
           class="sr-container border-b pb-12 border-grey w-full flex flex-col md:flex-row justify-between gap-8"
         >
           <div class="flex md:w-[40%] gap-4 md:gap-8 md:pl-12 items-start">
-            <p class="text-3xl md:text-4xl font-bold">01</p>
+            <p class="hoverTextImg text-3xl md:text-4xl font-bold">01</p>
             <h1 class="text-3xl md:text-4xl font-bold">Architecture Design</h1>
           </div>
           <div class="flex flex-col gap-6 md:gap-8 md:w-[45%] px-2 md:px-0">
-            <p class="text-base md:text-xl">
+            <p class="hoverTextImg text-base md:text-xl">
               We create innovative, modern architectural designs that blend
               luxury, functionality, and timeless aesthetics...
             </p>
-            <p class="text-base md:text-xl uppercase">Concept Development</p>
-            <p class="text-base md:text-xl uppercase">Space Planning</p>
-            <p class="text-base md:text-xl uppercase">3D Visualization</p>
+            <p class="hoverTextImg text-base md:text-xl uppercase">
+              Concept Development
+            </p>
+            <p class="hoverTextImg text-base md:text-xl uppercase">
+              Space Planning
+            </p>
+            <p class="hoverTextImg text-base md:text-xl uppercase">
+              3D Visualization
+            </p>
           </div>
         </div>
 
@@ -152,19 +168,23 @@
           class="sr-container border-b pb-12 border-grey w-full flex flex-col md:flex-row justify-between gap-8"
         >
           <div class="flex md:w-[40%] gap-4 md:gap-8 md:pl-12 items-start">
-            <p class="text-3xl md:text-4xl font-bold">02</p>
+            <p class="hoverTextImg text-3xl md:text-4xl font-bold">02</p>
             <h1 class="text-3xl md:text-4xl font-bold">Interior Design</h1>
           </div>
           <div class="flex flex-col gap-6 md:gap-8 md:w-[45%] px-2 md:px-0">
-            <p class="text-base md:text-xl">
+            <p class="hoverTextImg text-base md:text-xl">
               Our interior designs elevate spaces with refined materials,
               thoughtful layouts, and a seamless blend of elegance...
             </p>
-            <p class="text-base md:text-xl uppercase">
+            <p class="hoverTextImg text-base md:text-xl uppercase">
               Luxury Furnishings & Materials
             </p>
-            <p class="text-base md:text-xl uppercase">Custom Lighting Design</p>
-            <p class="text-base md:text-xl uppercase">Spatial Optimization</p>
+            <p class="hoverTextImg text-base md:text-xl uppercase">
+              Custom Lighting Design
+            </p>
+            <p class="hoverTextImg text-base md:text-xl uppercase">
+              Spatial Optimization
+            </p>
           </div>
         </div>
 
@@ -172,17 +192,23 @@
           class="sr-container border-b pb-12 border-grey w-full flex flex-col md:flex-row justify-between gap-8"
         >
           <div class="flex md:w-[40%] gap-4 md:gap-8 md:pl-12 items-start">
-            <p class="text-3xl md:text-4xl font-bold">03</p>
+            <p class="hoverTextImg text-3xl md:text-4xl font-bold">03</p>
             <h1 class="text-3xl md:text-4xl font-bold">Exterior Design</h1>
           </div>
           <div class="flex flex-col gap-6 md:gap-8 md:w-[45%] px-2 md:px-0">
-            <p class="text-base md:text-xl">
+            <p class="hoverTextImg text-base md:text-xl">
               We craft striking exteriors that integrate seamlessly with nature
               and urban environments...
             </p>
-            <p class="text-base md:text-xl uppercase">Façade Design</p>
-            <p class="text-base md:text-xl uppercase">Landscape Integration</p>
-            <p class="text-base md:text-xl uppercase">Outdoor Living Spaces</p>
+            <p class="hoverTextImg text-base md:text-xl uppercase">
+              Façade Design
+            </p>
+            <p class="hoverTextImg text-base md:text-xl uppercase">
+              Landscape Integration
+            </p>
+            <p class="hoverTextImg text-base md:text-xl uppercase">
+              Outdoor Living Spaces
+            </p>
           </div>
         </div>
       </section>
@@ -209,7 +235,7 @@
               >
                 Ocean Wave
               </h1>
-              <p class="text-base md:text-lg lg:text-xl max-w-xl">
+              <p class="hoverTextImg text-base md:text-lg lg:text-xl max-w-xl">
                 A flowing, organic design inspired by the movement and rhythm of
                 the sea.
               </p>
@@ -249,7 +275,7 @@
               >
                 Puzzle Tower
               </h1>
-              <p class="text-base md:text-lg lg:text-xl max-w-xl">
+              <p class="hoverTextImg text-base md:text-lg lg:text-xl max-w-xl">
                 A bold, modular design redefining vertical living with dynamic,
                 interlocking structure.
               </p>
@@ -289,7 +315,7 @@
               >
                 Honey Comb
               </h1>
-              <p class="text-base md:text-lg lg:text-xl max-w-xl">
+              <p class="hoverTextImg text-base md:text-lg lg:text-xl max-w-xl">
                 A nature-inspired structure featuring a hexagonal design for
                 beauty and efficiency.
               </p>
@@ -329,7 +355,7 @@
               >
                 Wave House
               </h1>
-              <p class="text-base md:text-lg lg:text-xl max-w-xl">
+              <p class="hoverTextImg text-base md:text-lg lg:text-xl max-w-xl">
                 Wave house is a visionary residential masterpiece inspired by
                 the fluid movement of water.
               </p>
@@ -355,11 +381,13 @@
       >
         <div class="left-side md:w-[35%] flex flex-col gap-6 md:gap-8">
           <h1 class="text-4xl md:text-6xl font-bold">Architecture in Motion</h1>
-          <p class="text-base md:text-xl">
+          <p class="hoverTextImg text-base md:text-xl">
             We analyze your vision, site conditions, and functional requirements
             to create a strategic framework.
           </p>
-          <p class="text-base md:text-xl font-medium flex items-center gap-2">
+          <p
+            class="hoverTextImg text-base md:text-xl font-medium flex items-center gap-2"
+          >
             Our Services
           </p>
         </div>
@@ -370,8 +398,8 @@
             class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
           >
             <h1 class="coutable-txt text-4xl md:text-6xl font-light">200+</h1>
-            <p class="text-lg md:text-xl uppercase">Projects</p>
-            <p class="text-sm md:text-base text-[#606060]">
+            <p class="hoverTextImg text-lg md:text-xl uppercase">Projects</p>
+            <p class="hoverTextImg text-sm md:text-base text-[#606060]">
               We have designed and completed over 300 projects, each reflecting
               our dedication to innovation, precision, and timeless
               architectural excellence.
@@ -382,8 +410,8 @@
             class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
           >
             <h1 class="coutable-txt text-4xl md:text-6xl font-light">300+</h1>
-            <p class="text-lg md:text-xl uppercase">Clients</p>
-            <p class="text-sm md:text-base text-[#606060]">
+            <p class="hoverTextImg text-lg md:text-xl uppercase">Clients</p>
+            <p class="hoverTextImg text-sm md:text-base text-[#606060]">
               With over 200 satisfied clients, we have built lasting
               relationships through exceptional design, strategic planning, and
               craftsmanship.
@@ -394,8 +422,10 @@
             class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
           >
             <h1 class="coutable-txt text-4xl md:text-6xl font-light">100%</h1>
-            <p class="text-lg md:text-xl uppercase">Happy Clients</p>
-            <p class="text-sm md:text-base text-[#606060]">
+            <p class="hoverTextImg text-lg md:text-xl uppercase">
+              Happy Clients
+            </p>
+            <p class="hoverTextImg text-sm md:text-base text-[#606060]">
               Client satisfaction is our priority—every project is delivered
               with precision, passion, and attention to detail, ensuring
               outstanding results.
@@ -406,8 +436,8 @@
             class="s4-card bg-[#f3f3f3] rounded-md p-6 md:p-10 flex flex-col gap-2 shadow-sm"
           >
             <h1 class="coutable-txt text-4xl md:text-6xl font-light">110%</h1>
-            <p class="text-lg md:text-xl uppercase">Commitments</p>
-            <p class="text-sm md:text-base text-[#606060]">
+            <p class="hoverTextImg text-lg md:text-xl uppercase">Commitments</p>
+            <p class="hoverTextImg text-sm md:text-base text-[#606060]">
               Client satisfaction is our priority—every project is delivered
               with precision, passion, and attention to detail, ensuring
               outstanding results.
@@ -447,7 +477,7 @@
             <div
               class="flex justify-center md:justify-end md:gap-28 gap-4 text-lg"
             >
-              <div><p class="font-medium">CEO</p></div>
+              <div><p class="hoverTextImg font-medium">CEO</p></div>
               <div
                 class="flex justify-center md:justify-end gap-6 text-lg text-gray-600"
               >
@@ -493,7 +523,7 @@
             <div
               class="flex justify-center md:justify-end md:gap-28 gap-4 text-lg"
             >
-              <div><p class="font-medium">CEO</p></div>
+              <div><p class="hoverTextImg font-medium">CEO</p></div>
               <div
                 class="flex justify-center md:justify-end gap-6 text-lg text-gray-600"
               >
@@ -539,7 +569,7 @@
             <div
               class="flex justify-center md:justify-end md:gap-28 gap-4 text-lg"
             >
-              <div><p class="font-medium">CEO</p></div>
+              <div><p class="hoverTextImg font-medium">CEO</p></div>
               <div
                 class="flex justify-center md:justify-end gap-6 text-lg text-gray-600"
               >
@@ -599,7 +629,7 @@
           >
             Bold Design
           </h1>
-          <p class="max-w-2xl text-lg md:text-xl leading-relaxed">
+          <p class="hoverTextImg max-w-2xl text-lg md:text-xl leading-relaxed">
             With a clear plan in place, we craft a sophisticated design that
             blends aesthetics, functionality, and innovation.
           </p>
@@ -622,7 +652,9 @@
         <div
           class="s7-div flex flex-col justify-center items-center text-center space-y-4"
         >
-          <p class="uppercase text-sm md:text-base tracking-widest text-black">
+          <p
+            class="hoverTextImg uppercase text-sm md:text-base tracking-widest text-black"
+          >
             Contact
           </p>
 
@@ -706,34 +738,68 @@
           </div>
 
           <div class="flex flex-col gap-3 w-full sm:w-1/2 lg:w-1/5">
-            <p class="font-bold mb-2">PAGES</p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">Home</p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">
+            <p class="hoverTextImg font-bold mb-2">PAGES</p>
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
+              Home
+            </p>
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
               Services
             </p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">About</p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">Career</p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">Contact</p>
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
+              About
+            </p>
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
+              Career
+            </p>
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
+              Contact
+            </p>
           </div>
 
           <div class="flex flex-col gap-3 w-full sm:w-1/2 lg:w-1/5">
-            <p class="font-bold mb-2">CMS</p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">
+            <p class="hoverTextImg font-bold mb-2">CMS</p>
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
               Projects
             </p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
               Project Single
             </p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">Blog</p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
+              Blog
+            </p>
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
               Blog Single
             </p>
           </div>
 
           <div class="flex flex-col gap-3 w-full sm:w-1/2 lg:w-1/5">
-            <p class="font-bold mb-2">UTILITY PAGES</p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">404</p>
-            <p class="text-gray-400 hover:text-white cursor-pointer">
+            <p class="hoverTextImg font-bold mb-2">UTILITY PAGES</p>
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
+              404
+            </p>
+            <p
+              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+            >
               Licensing
             </p>
           </div>

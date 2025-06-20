@@ -203,6 +203,66 @@ function countableTxt() {
   });
 }
 
+function hoverAbsoluteDiv(){
+  
+const mainContainer = document.querySelector(".mainContainer");
+const absoluteDiv = document.querySelector(".absoluteDiv");
+const zoomedText = absoluteDiv.querySelector(".zoomedText");
+
+mainContainer.addEventListener("mousemove", (e) => {
+  gsap.to(".absoluteDiv", {
+    x: e.clientX,
+    y: e.clientY,
+    duration: 0.3,
+    ease: "power2.out",
+  });
+});
+
+// s2 specific enlargement
+// const s2 = document.querySelector(".s2");
+mainContainer.addEventListener("mouseenter", () => {
+  gsap.to(".absoluteDiv", {
+    height: "80px",
+    width: "80px",
+    opacity: 1,
+    scale: 1,
+    duration: 0.3,
+  });
+});
+mainContainer.addEventListener("mouseleave", () => {
+  gsap.to(".absoluteDiv", {
+    height: "40px",
+    width: "40px",
+    opacity: 0,
+    scale: 0,
+    duration: 0.3,
+  });
+});
+
+document.querySelectorAll(".hoverTextImg").forEach((el) => {
+  el.addEventListener("mouseenter", (e) => {
+    zoomedText.innerText = el.innerText;
+  });
+
+  el.addEventListener("mousemove", (e) => {
+    const bounds = el.getBoundingClientRect();
+    const offsetX = e.clientX - bounds.left;
+    const offsetY = e.clientY - bounds.top;
+
+  
+    zoomedText.style.transform = `translate(${-offsetX}px, ${-offsetY}px) scale(2.5)`;
+    zoomedText.style.whiteSpace = "nowrap";
+  });
+
+  el.addEventListener("mouseleave", () => {
+    zoomedText.innerText = "";
+  });
+});
+
+}
+
+
+hoverAbsoluteDiv()
 countableTxt();
 section7Animations();
 section6Animations();
