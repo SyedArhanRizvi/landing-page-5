@@ -53,7 +53,7 @@ function heroTextScalingAnim() {
     },
   });
   gsap.from(".hero-para-2-ttl", {
-    x: "-20%",
+    x: "-150%",
     opacity: 0,
     duration: 1,
     ease: "power2.out",
