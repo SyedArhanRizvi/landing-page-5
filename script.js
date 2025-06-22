@@ -336,3 +336,31 @@ section3ScrollingAnim();
 section2ScrollingAnim();
 heroTextScalingAnim();
 navbarAnimations();
+
+
+function enquiryFormSubmit() {
+  let url = "https://script.google.com/macros/s/AKfycbz9nZZUrKNdnH63kpaqXAfh6Xjl96Q7IpFVD--92LdkvbbwwfF2VkuSFQAGeoJDLLVZ/exec";
+  let form = document.querySelector("#form");
+  form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    e.target.enBtn.innerHTML = "Submitting";
+    let enquiryData = new FormData(form);
+    fetch(url, {
+      method:"POST",
+      body:enquiryData
+    }).then((res)=>res.text()).then((finalRes)=>{
+        e.target.enBtn.innerHTML = "Submit";
+       alert("Enquiry Submit Successfully!");
+      console.log('====================================');
+      console.log(finalRes);
+      console.log('====================================');
+    }).catch((err)=>{
+     
+      console.log('====================================');
+      console.log("Form Err ", err);
+      alert("Server Error, Please Try Again.")
+      console.log('====================================');
+    })
+  })
+}
+enquiryFormSubmit();
