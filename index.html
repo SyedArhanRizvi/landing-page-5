@@ -19,14 +19,96 @@
   <body
     class="body flex justify-center items-center h-screen w-screen bg-black"
   >
-    <!-- <nav class="bg-black w-[30vw] h-[5vh] absolute top-10 left-1/3 z-50"></nav> -->
+    <nav
+      id="navbar"
+      class="fixed top-4 left-[50%] -translate-x-[50%] z-50 bg-black text-white w-[40vw] max-w-[90vw] rounded-full px-6 py-4 flex justify-between items-center transition-all duration-500"
+    >
+      <div class="hidden md:flex w-full justify-between items-center">
+        <p class="cursor-pointer hover:text-gray-300">Home</p>
+        <p class="cursor-pointer hover:text-gray-300">Services</p>
+        <p class="cursor-pointer hover:text-gray-300">Projects</p>
+        <p class="contact-now cursor-pointer hover:text-gray-300">Contact</p>
+      </div>
+
+      <!-- Menu Icon (Mobile) -->
+      <div class="md:hidden w-full flex justify-between items-center">
+        <div class="font-bold">arkitect</div>
+        <i id="menuBtn" class="fas fa-bars text-xl cursor-pointer"></i>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobileMenu"
+      class="fixed top-20 left-[50%] -translate-x-[50%] bg-black text-white w-[80vw] rounded-xl py-4 px-6 hidden z-40 md:hidden flex-col items-center space-y-4"
+    >
+      <i id="closeBtn" class="fas fa-times text-xl self-end cursor-pointer"></i>
+      <p class="cursor-pointer hover:text-gray-300">Home</p>
+      <p class="cursor-pointer hover:text-gray-300">Services</p>
+      <p class="cursor-pointer hover:text-gray-300">Projects</p>
+      <p class="contact-now cursor-pointer hover:text-gray-300">Contact</p>
+    </div>
+
     <main
       class="mainContainer w-[98vw] h-[100vh] overflow-y-auto rounded-[45px] overflow-hidden"
     >
-      <!-- <div
-        class="absoluteDiv h-[12px] w-[12px] bg-black absolute z-50 rounded-full"
-      ></div> -->
-      <!-- Magnifier lens element -->
+     
+      <div
+        id="contactModal"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50"
+      >
+        <div
+          class="bg-white w-[95vw] max-w-4xl mx-auto rounded-lg overflow-hidden flex flex-col md:flex-row relative animate-fadeIn"
+        >
+          <i
+            id="closeModal"
+            class="fas fa-times absolute top-4 right-4 text-gray-600 text-2xl cursor-pointer hover:text-red-500"
+          ></i>
+
+          <!-- Left Side Image -->
+          <div class="md:w-1/2 w-full">
+            <img
+              src="https://img.freepik.com/premium-photo/real-estate-agent-signing-mortgage-agreement-new-home-generative-ai_1001448-505.jpg"
+              alt="Contact"
+              class="h-full w-full object-cover"
+            />
+          </div>
+
+          <!-- Right Side Form -->
+          <div class="md:w-1/2 w-full p-6">
+            <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+            <form class="space-y-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <textarea
+                rows="4"
+                placeholder="Your Message"
+                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+              <button
+                type="submit"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
       <div
         class="absoluteDiv fixed pointer-events-none opacity-0 scale-0 rounded-full border border-black w-10 h-10 overflow-hidden bg-white z-50 flex items-center justify-center"
       >
@@ -54,7 +136,9 @@
             class="nav w-11/12 max-w-7xl mx-auto py-4 px-2 flex flex-col sm:flex-row justify-between items-center gap-4"
           >
             <div class="mb-2 sm:mb-0">
-              <h1 class="hoverTextImg logo-h1 text-2xl font-bold tracking-wide">
+              <h1
+                class="hoverTextImg hidden md:flex logo-h1 text-2xl font-bold tracking-wide"
+              >
                 arkitect
               </h1>
             </div>
@@ -266,7 +350,7 @@
                 Commercial
               </button>
               <button
-                class="uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
+                class="contact-now uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
               >
                 Berlin
               </button>
@@ -305,7 +389,7 @@
                 Commercial
               </button>
               <button
-                class="uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
+                class="contact-now uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
               >
                 Berlin
               </button>
@@ -345,7 +429,7 @@
                 Commercial
               </button>
               <button
-                class="uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
+                class="contact-now uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
               >
                 Berlin
               </button>
@@ -385,7 +469,7 @@
                 Commercial
               </button>
               <button
-                class="uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
+                class="contact-now uppercase px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition"
               >
                 Berlin
               </button>
@@ -702,7 +786,7 @@
           </h1>
 
           <button
-            class="relative group mt-6 bg-black text-white rounded-full px-12 py-3 overflow-hidden"
+            class="contact-now relative group mt-6 bg-black text-white rounded-full px-12 py-3 overflow-hidden"
           >
             <p
               class="transition-all duration-300 group-hover:-translate-y-[200px]"
@@ -802,7 +886,7 @@
               Career
             </p>
             <p
-              class="hoverTextImg text-gray-400 hover:text-white cursor-pointer"
+              class="contact-now hoverTextImg text-gray-400 hover:text-white cursor-pointer"
             >
               Contact
             </p>

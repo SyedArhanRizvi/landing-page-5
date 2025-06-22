@@ -1,5 +1,36 @@
 let tl = gsap.timeline();
 
+function navbarStyling() {
+  const navbar = document.getElementById("navbar");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuBtn = document.getElementById("menuBtn");
+  const closeBtn = document.getElementById("closeBtn");
+
+  const mainContainer = document.querySelector(".mainContainer");
+  let lastScrollY = mainContainer.scrollTop;
+
+  mainContainer.addEventListener("scroll", () => {
+    const currentScrollY = mainContainer.scrollTop;
+
+    if (currentScrollY > lastScrollY) {
+      navbar.style.top = "-100px"; // Hide
+    } else {
+      navbar.style.top = "16px"; // Show
+    }
+
+    lastScrollY = currentScrollY;
+  });
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+}
+
+navbarStyling();
 function navbarAnimations() {
   tl.from(".logo-h1", {
     opacity: 0.1,
@@ -222,7 +253,11 @@ function globalMagnifier() {
     // Get element under cursor
     const hoveredElement = document.elementFromPoint(x, y);
 
-    if (hoveredElement && hoveredElement !== absoluteDiv && hoveredElement !== zoomedText) {
+    if (
+      hoveredElement &&
+      hoveredElement !== absoluteDiv &&
+      hoveredElement !== zoomedText
+    ) {
       const styles = getComputedStyle(hoveredElement);
 
       // Clone text content
@@ -237,7 +272,9 @@ function globalMagnifier() {
       const bounds = hoveredElement.getBoundingClientRect();
       const offsetX = x - bounds.left;
       const offsetY = y - bounds.top;
-      zoomedText.style.transform = `translate(${-offsetX + 80}px, ${-offsetY}px) scale(3.5)`;
+      zoomedText.style.transform = `translate(${
+        -offsetX + 80
+      }px, ${-offsetY}px) scale(3.5)`;
     } else {
       zoomedText.innerText = "";
     }
@@ -265,9 +302,31 @@ function globalMagnifier() {
   });
 }
 
+function contactUsModal() {
+  const modal = document.getElementById("contactModal");
+  const closeModal = document.getElementById("closeModal");
+  const contactBtns = document.querySelectorAll(".contact-now");
+
+  setTimeout(() => {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }, 8000);
+
+  contactBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("flex");
+    modal.classList.add("hidden");
+  });
+}
+contactUsModal();
+
 globalMagnifier();
-
-
 
 countableTxt();
 section7Animations();
